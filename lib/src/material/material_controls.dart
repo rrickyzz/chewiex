@@ -388,7 +388,7 @@ class _MaterialControlsState extends State<MaterialControls>
       child: CenterPlayButton(
         backgroundColor: Colors.black54,
         iconColor: Colors.white,
-        isFinished: isFinished,
+        isFinished: !_latestValue.isPlaying ? false : isFinished,
         isPlaying: controller.value.isPlaying,
         show: showPlayButton,
         onPressed: _playPause,
